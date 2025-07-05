@@ -20,14 +20,14 @@ const techIcons: Record<string, JSX.Element> = {
   MLX: <img src={MlxLogo} alt="MLX42" className="w-15 h-9" />
 }
 
-const GameCard = (props: GameCardProps) => {
+const GameCard = (props: GameCardProps & { borderClass?: string }) => {
   const {
     title,
     releaseDate,
     previewImg,
-    stack,
     shortDescription,
     bgColor,
+    borderClass = 'border-gray-600',
   } = props
 
   const [hovered, setHovered] = useState(false)
@@ -35,46 +35,42 @@ const GameCard = (props: GameCardProps) => {
 
   return (
     <>
-      <div
-        className={`relative w-64 h-96 rounded-xl overflow-hidden shadow-lg transition-all duration-300 cursor-pointer p-4 flex flex-col justify-between
-		${hovered ? 'scale-105 shadow-2xl ring-3 ring-emerald-500 ring-opacity-50' : 'shadow-l ring-2 ring-emerald-800 ring-opacity-50'}
-		${bgColor}
+		<div
+		className={`relative w-64 h-[424px] rounded-xl overflow-hidden transition-all duration-300 cursor-pointer p-4 flex flex-col
+			${bgColor}
+			${hovered
+			? `scale-105 border-4 ${borderClass.replace('border-', 'border-')}`
+			: `border-2 ${borderClass}`}
 		`}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        onClick={() => setModalOpen(true)}
-      >
-        <div className="h-[72px] flex flex-col items-center justify-start gap-1">
+		onMouseEnter={() => setHovered(true)}
+		onMouseLeave={() => setHovered(false)}
+		onClick={() => setModalOpen(true)}
+		>
+			{/* Title + release date */}
+			<div className="h-[72px] flex flex-col items-center justify-start gap-1">
 			<h3 className="text-2xl font-bold text-white text-center leading-tight line-clamp-2">
 				{title}
 			</h3>
 			<p className="text-xs text-center bg-gray-600 text-white rounded-3xl px-2 py-1 mt-1">
 				{releaseDate}
 			</p>
-		</div>
+			</div>
 
-	{/*	
-		<div className="flex gap-2 justify-center mb-2 mt-3">
-			{stack.map((tech) => (
-			<span key={tech} title={tech}>
-				{techIcons[tech]}
-			</span>
-			))}
-		</div>
-	*/}
-
-        <div className="h-40 flex items-center justify-center my-2 border-1 border-gray-500 rounded-md">
+			{/* Image */}
+			<div className="h-40 flex items-center justify-center my-2 border border-gray-500 rounded-md">
 			<img
 				src={previewImg}
 				alt={title}
 				className="w-full h-full object-cover rounded"
 			/>
-		</div>
+			</div>
 
-        <div className="min-h-[60px] text-sm text-gray-200">
-			<p className="text-s mb-2 text-center">{shortDescription}</p>
-		</div>
-
+			{/* Description */}
+			<div className="flex-1 flex items-center justify-center">
+			<p className="text-[0.9375rem] text-gray-200 text-center px-2">
+				{shortDescription}
+			</p>
+			</div>
       </div>
 
       {modalOpen && (
@@ -85,4 +81,3 @@ const GameCard = (props: GameCardProps) => {
 }
 
 export default GameCard
-

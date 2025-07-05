@@ -18,7 +18,7 @@ export const games = [
 	videoSrc: labIncidentVideo,
 	stack: ['Godot'],
 	bgColor: commonBgColor,
-	shortDescription: 'Fast-paced platformer where you repel monsters back into a portal.',
+	shortDescription: 'Survive a lab project gone wrong! Trap foes in bubbles and send them back through the portal before they run you over.',
 	description:
 		'The Lab Incident is a fast-paced 2D platformer created during the Finnish Game Jam 2025. You play as a lone scientist trying to repel waves of otherworldly monsters back into a dimensional portal before they overrun the facility. With tight movement mechanics, escalating intensity, and a minimalist retro aesthetic, the game offers a short but intense arcade experience developed in just 48 hours.',
 	process: [
@@ -41,7 +41,7 @@ export const games = [
 	videoSrc: gravityChangerVideo,
 	stack: ['Cpp', 'SFML'],
 	bgColor: commonBgColor,
-	shortDescription: 'Fast-paced platformer where you repel monsters back into a portal.',
+	shortDescription: 'Bend gravity to your will in this fast-paced platformer where you flip directions to grab points, beat the clock, and defy physics.',
 	description:
 		'Gravity Changer is a 2D platformer built with C++ and SFML, featuring a unique gravity-shifting mechanic. The player can invert gravity at will, navigating complex levels that challenge spatial awareness and timing. This solo project was developed over two weeks and focuses on responsive movement, smooth transitions between gravity states, and dynamic level design.',
 	process: [
@@ -63,7 +63,7 @@ export const games = [
 	videoSrc: snakeAdventuresVideo,
 	stack: ['Cpp', 'SFML'],
 	bgColor: commonBgColor,
-	shortDescription: 'Fast-paced platformer where you repel monsters back into a portal.',
+	shortDescription: 'Dodge tower fire and gobble apples in an action-packed Snake-inspired game.',
 	description:
 		'Snake Adventures is a modern take on the classic snake game, built with C++ and the SFML library. While it retains the core mechanics of traditional snake gameplay, it introduces a small twist that adds variety and challenge. As a beginner-friendly solo project, this game helped lay the foundation for more complex game development work.',
 	process: [
@@ -86,7 +86,7 @@ export const games = [
 	videoSrc: diamondHuntVideo,
 	stack: ['C', 'MLX'],
 	bgColor: commonBgColor,
-	shortDescription: 'Fast-paced platformer where you repel monsters back into a portal.',
+	shortDescription: 'Play as a hammer-swinging king on a quest to reclaim his lost diamonds while battling mischievous pigs in a 2D adventure.',
 	description:
 		'Diamond Hunt is a retro-style 2D puzzle adventure game where you guide a determined king through a maze of hazards to recover his stolen diamonds. But beware — cunning evil pigs guard the treasure! Built entirely in C using the MLX42 graphics library, this game blends simple mechanics with hand-crafted sprite-based visuals and real-time keyboard input.',
 	process: [

@@ -14,7 +14,7 @@ const Header = () => {
     <header className="bg-gray-800 text-white shadow-lg sticky top-0 z-50">
       <div className="mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-green-400">Panu Kangas</h1>
+          <h1 className="text-3xl font-bold text-green-500">Panu Kangas</h1>
           <p className="text-sm text-gray-400">
             Creative game developer with versatile tech stack
           </p>
