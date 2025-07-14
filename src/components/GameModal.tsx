@@ -9,6 +9,10 @@ import type { GameCardProps } from '../data/types'
 interface GameModalProps {
   game: GameCardProps
   onClose: () => void
+  primaryColor: string
+  backgroundColor: string
+  borderColor: string
+  stackBackgroundColor: string
 }
 
 const techIcons: Record<string, JSX.Element> = {
@@ -23,7 +27,14 @@ const techIcons: Record<string, JSX.Element> = {
   MLX: <img src={MlxLogo} alt="MLX42" className="w-15 h-9" />
 }
 
-const GameModal = ({ game, onClose }: GameModalProps) => {
+const GameModal = ({
+  game,
+  onClose,
+  primaryColor,
+  backgroundColor,
+  borderColor,
+  stackBackgroundColor
+}: GameModalProps) => {
   const {
     title,
     releaseDate,
@@ -36,26 +47,47 @@ const GameModal = ({ game, onClose }: GameModalProps) => {
   } = game
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
-      <div className="bg-gray-900 text-gray-300 rounded-xl p-6 max-w-4xl w-full relative shadow-lg overflow-auto max-h-[90vh] border border-emerald-500">
-        
+    <div
+	className="fixed inset-0 flex items-center justify-center z-50 p-4"
+	style={{
+		backgroundColor: stackBackgroundColor,
+		backdropFilter: 'blur(4px)',
+		WebkitBackdropFilter: 'blur(4px)',
+	}}
+	>
+
+      <div
+        className="text-gray-300 bg-gray-900 rounded-xl p-6 max-w-4xl w-full relative shadow-2xl overflow-auto max-h-[90vh] border-2"
+        style={{
+          borderColor: primaryColor,
+        }}
+      >
+
         {/* Top bar */}
         <div className="flex items-start justify-between relative mb-16">
+
           {/* Tech Stack Box */}
-		<div className="bg-gray-700 p-4 rounded-md shadow-sm border-emerald-500 border-2 flex gap-8 justify-center flex-wrap">
-			{stack.map((tech) => (
-				<div key={tech} className="flex flex-col items-center text-gray-300 text-sm">
-				<span className="mb-1 flex justify-center">
-					{techIcons[tech]}
-				</span>
-			{/*	<span>{tech}</span> */}
-				</div>
-			))}
-		</div>
+          <div
+            className="p-4 rounded-md shadow-sm flex gap-8 justify-center flex-wrap border-2"
+            style={{
+              borderColor: primaryColor,
+              backgroundColor: 'rgba(255,255,255,0.05)'
+            }}
+          >
+            {stack.map((tech) => (
+              <div key={tech} className="flex flex-col items-center text-gray-300 text-sm">
+                <span className="mb-1 flex justify-center">
+                  {techIcons[tech]}
+                </span>
+              </div>
+            ))}
+          </div>
 
           {/* Title & Date */}
           <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
-            <h2 className="text-3xl font-bold text-green-400">{title}</h2>
+            <h2 className="text-3xl font-bold" style={{ color: primaryColor }}>
+              {title}
+            </h2>
             <p className="text-xs bg-gray-700 text-gray-200 rounded-3xl px-2 py-1 mt-1">
               Game finished: {releaseDate}
             </p>
@@ -73,7 +105,10 @@ const GameModal = ({ game, onClose }: GameModalProps) => {
         </div>
 
         {/* Video */}
-        <div className="w-full mb-6 border-2 border-emerald-500 rounded-lg overflow-hidden shadow-md">
+        <div
+          className="w-full mb-6 border-2 rounded-lg overflow-hidden shadow-md"
+          style={{ borderColor: primaryColor }}
+        >
           <video
             src={videoSrc}
             autoPlay
@@ -86,13 +121,23 @@ const GameModal = ({ game, onClose }: GameModalProps) => {
 
         {/* Info Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-gray-300">
-          <div className="bg-gray-800 border border-emerald-500 rounded-lg p-4 md:col-span-2 shadow">
-            <h3 className="text-lg font-semibold text-green-300 mb-2">Description</h3>
+          <div
+            className="bg-gray-800 rounded-lg p-4 md:col-span-2 shadow"
+            style={{ border: `1px solid ${borderColor}` }}
+          >
+            <h3 className="text-lg font-semibold mb-2" style={{ color: primaryColor }}>
+              Description
+            </h3>
             <p>{description}</p>
           </div>
 
-          <div className="bg-gray-800 border border-emerald-500 rounded-lg p-4 md:col-span-2 shadow">
-            <h3 className="text-lg font-semibold text-green-300 mb-2">How Was the Process?</h3>
+          <div
+            className="bg-gray-800 rounded-lg p-4 md:col-span-2 shadow"
+            style={{ border: `1px solid ${borderColor}` }}
+          >
+            <h3 className="text-lg font-semibold mb-2" style={{ color: primaryColor }}>
+              How Was the Process?
+            </h3>
             <ul className="list-disc list-inside">
               {process.map((step, idx) => (
                 <li key={idx} className="mb-1">{step}</li>
@@ -100,8 +145,13 @@ const GameModal = ({ game, onClose }: GameModalProps) => {
             </ul>
           </div>
 
-          <div className="bg-gray-800 border border-emerald-500 rounded-lg p-4 md:col-span-2 shadow">
-            <h3 className="text-lg font-semibold text-green-300 mb-2">What Did I Learn?</h3>
+          <div
+            className="bg-gray-800 rounded-lg p-4 md:col-span-2 shadow"
+            style={{ border: `1px solid ${borderColor}` }}
+          >
+            <h3 className="text-lg font-semibold mb-2" style={{ color: primaryColor }}>
+              What Did I Learn?
+            </h3>
             <ul className="list-disc list-inside">
               {learnings.map((point, idx) => (
                 <li key={idx} className="mb-1">{point}</li>
@@ -122,12 +172,18 @@ const GameModal = ({ game, onClose }: GameModalProps) => {
             href={playUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-md bg-green-500 text-black hover:bg-green-400 transition"
+            className="px-4 py-2 rounded-md"
+            style={{
+              backgroundColor: primaryColor,
+              color: '#000',
+              opacity: 0.95
+            }}
+			onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+			onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
           >
             Play Game
           </a>
         </div>
-
       </div>
     </div>
   )

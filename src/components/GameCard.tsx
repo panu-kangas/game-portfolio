@@ -20,7 +20,13 @@ const techIcons: Record<string, JSX.Element> = {
   MLX: <img src={MlxLogo} alt="MLX42" className="w-15 h-9" />
 }
 
-const GameCard = (props: GameCardProps & { borderClass?: string }) => {
+const GameCard = (props: GameCardProps & {
+	borderClass?: string,
+	primaryColor?: string,
+	borderColor?: string,
+	backgroundColor?: string,
+	stackBackgroundColor?: string
+}) => {
   const {
     title,
     releaseDate,
@@ -48,7 +54,7 @@ const GameCard = (props: GameCardProps & { borderClass?: string }) => {
 		>
 			{/* Title + release date */}
 			<div className="h-[72px] flex flex-col items-center justify-start gap-1">
-			<h3 className="text-2xl font-bold text-white text-center leading-tight line-clamp-2">
+			<h3 className="text-2xl font-bold text-white text-center leading-tight line-clamp-2"style={{ color: props.primaryColor }}>
 				{title}
 			</h3>
 			<p className="text-xs text-center bg-gray-600 text-white rounded-3xl px-2 py-1 mt-1">
@@ -74,8 +80,15 @@ const GameCard = (props: GameCardProps & { borderClass?: string }) => {
       </div>
 
       {modalOpen && (
-        <GameModal game={props} onClose={() => setModalOpen(false)} />
-      )}
+			<GameModal
+				game={props}
+				onClose={() => setModalOpen(false)}
+				primaryColor={props.primaryColor || '#10B981'}
+				borderColor={props.borderColor || '#444'}
+				backgroundColor={props.backgroundColor || '#1F2937'}
+				stackBackgroundColor={props.stackBackgroundColor || '#111'}
+			/>
+		)}
     </>
   )
 }
