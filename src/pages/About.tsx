@@ -4,7 +4,7 @@ import { FiExternalLink } from 'react-icons/fi'
 
 const About = () => {
 	const techStack = ['C/C++', 'Godot', 'JavaScript', 'TypeScript', 'React', 'Python']
-	const hobbies = ['Game Development', 'Football', 'Music']
+	const hobbies = ['Game Development & Gaming', 'Football', 'Music']
 	const favGames = ['Witcher 3', 'The Last of Us', 'Skyrim', 'Clash Royale']
 
 	const Pills = ({ items }: { items: string[] }) => (
@@ -27,9 +27,6 @@ const About = () => {
 		))}
 	</div>
 	)
-
-
-
 
 
 	return (

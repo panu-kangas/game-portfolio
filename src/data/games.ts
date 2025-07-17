@@ -18,18 +18,26 @@ export const games = [
 	videoSrc: labIncidentVideo,
 	stack: ['Godot'],
 	bgColor: commonBgColor,
-	shortDescription: 'Survive a lab project gone wrong! Trap foes in bubbles and send them back through the portal before they run you over.',
+	shortDescription: 'Survive a lab project gone wrong! Trap foes in bubbles and send them back through a portal before they run you over.',
 	description:
-		'The Lab Incident is a fast-paced 2D platformer created during the Finnish Game Jam 2025. You play as a lone scientist trying to repel waves of otherworldly monsters back into a dimensional portal before they overrun the facility. With tight movement mechanics, escalating intensity, and a minimalist retro aesthetic, the game offers a short but intense arcade experience developed in just 48 hours.',
+	'The Lab Incident is a chaotic 2D action game created in just 48 hours for the Finnish Game Jam 2025. \
+	You play as a scientist whose experiment has gone horribly, dimensionally wrong — a portal has opened, and monsters are pouring in! \
+	Armed with a just a bubble gun (weird, right?), you must trap the creatures and launch them back through the portal before they escape the lab. \
+	It’s fast, frantic, and full of science-gone-wrong energy. Good luck… you’re the cleanup crew now.',
 	process: [
-		'Developed in 48 hours during Finnish Game Jam 2025',
+		'Developed using the Godot game engine',
 		'Collaborated as part of a 4-person development team',
-		'Focused on implementing core gameplay logic, collision detection, and win/lose conditions'
+		'Key features: bubble-based enemy capture, portal mechanic & enemy spawning, platform navigation logic',
+		'My main tasks included implementing core gameplay logic, collision detection, and the win/lose conditions',
+		'Developed in just 48 hours for the Finnish Game Jam 2025',
+		'First time working with Godot AND my first ever game jam — there was a lot to learn, fast!'
 	],
 	learnings: [
 		'Gained hands-on experience with the Godot game engine',
-		'Improved collaboration under strict time constraints',
-		'Practiced rapid ideation and prototyping in a jam setting'
+		'Improved teamwork and communication under tight time constraints',
+		'Learned to prioritize features and stay focused during intense development sprints',
+		'Practiced rapid ideation and prototyping',
+		'Learned the fundamentals of releasing and publishing a game online'
 	],
 	playUrl: 'https://github.com/KrolPolski/Finnish-Game-Jam-2025',
 	slug: 'the-lab-incident',
@@ -43,15 +51,20 @@ export const games = [
 	bgColor: commonBgColor,
 	shortDescription: 'Bend gravity to your will in this fast-paced platformer where you flip directions to grab points, beat the clock, and defy physics.',
 	description:
-		'Gravity Changer is a 2D platformer built with C++ and SFML, featuring a unique gravity-shifting mechanic. The player can invert gravity at will, navigating complex levels that challenge spatial awareness and timing. This solo project was developed over two weeks and focuses on responsive movement, smooth transitions between gravity states, and dynamic level design.',
+		'Gravity Changer is a fast-paced platformer where you control a brave green rectangle on a quest for red-point glory. \
+		The goal? Snatch up as many points as you can before the timer hits zero — and yes, every point buys you a little more time. \
+		The twist? You can shift gravity in any direction, pulling yourself toward walls, ceilings, and other hard-to-reach places. \
+		Think fast, shift smart, and bend the rules of gravity before the clock runs out!',
 	process: [
-		'Developed as a solo side project over two weeks',
-		'Handled all aspects of design, coding, and testing independently'
+		'Developed using C++ and the SFML library',
+		'Solo project created during my free time',
+		'Key features: gravity shift mechanic, point and timer system, direction-aware collision handling',
+		'Completed over the course of 2 weeks'
 	],
 	learnings: [
-		'Implemented gravity inversion logic and physics handling',
-		'Built custom collision detection with directional awareness',
-		'Improved C++ skills, focusing on scalable game architecture and code readability'
+		'Improved my C++ skills, with a focus on scalable game architecture and clean, readable code',
+		'Learned firsthand the challenges of collision detection and resolution — it’s trickier than it looks!',
+		'Gained a better sense of game balance, especially around speed, points, and timer tuning'
 	],
 	playUrl: 'https://github.com/panu-kangas/Gravity_changer',
 	slug: 'gravity-changer',
@@ -65,16 +78,22 @@ export const games = [
 	bgColor: commonBgColor,
 	shortDescription: 'Dodge tower fire and gobble apples in an action-packed Snake-inspired game.',
 	description:
-		'Snake Adventures is a modern take on the classic snake game, built with C++ and the SFML library. While it retains the core mechanics of traditional snake gameplay, it introduces a small twist that adds variety and challenge. As a beginner-friendly solo project, this game helped lay the foundation for more complex game development work.',
+		'Snake Adventures is a fast-paced, snake-style game where you slither around collecting all the apples on the map. \
+		Keep your eyes peeled though — towers are ready to shoot arrows your way at the slightest mistake! \
+		Luckily, our speedy Snake comes equipped with a Power Boost that lets him zoom ahead for short bursts of time. \
+		Think you can outsmart the towers and finish your fruity feast without getting pierced? Better stay sharp and keep moving!',
 	process: [
 		'Developed using C++ and the SFML library',
-		'First project with this technology stack',
 		'Solo project created during my free time',
-		'Completed over the course of approximately 4 weeks'
+		'Key features: Snake movement, apple collection system, tower AI and arrow tracking, Power Boost ability',
+		'Completed over the course of approximately 4 weeks',
+		'First project with this tech stack'
 	],
 	learnings: [
-		'Learned the fundamentals of SFML and how to apply it in game development',
-		'Improved understanding of C++ containers, object-oriented programming, and class structuring'
+		'Learned the fundamentals of SFML and how to apply it to game development',
+		'Improved my understanding of C++ containers, object-oriented programming, and class structuring',
+		'Gained new insights into game UX, like balancing movement speed for a satisfying feel',
+		'Learned practical memory and resource handling — like rendering only what’s visible and cleaning up off-screen arrows'
 	],
 	playUrl: 'https://github.com/panu-kangas/Snake_SFML',
 	slug: 'snake_adventures',
@@ -88,16 +107,22 @@ export const games = [
 	bgColor: commonBgColor,
 	shortDescription: 'Play as a hammer-swinging king on a quest to reclaim his lost diamonds while battling mischievous pigs in a 2D adventure.',
 	description:
-		'Diamond Hunt is a retro-style 2D puzzle adventure game where you guide a determined king through a maze of hazards to recover his stolen diamonds. But beware — cunning evil pigs guard the treasure! Built entirely in C using the MLX42 graphics library, this game blends simple mechanics with hand-crafted sprite-based visuals and real-time keyboard input.',
+		'Diamond Hunt is a retro-style 2D puzzle adventure game where you guide a determined king through a maze to recover his stolen diamonds. \
+		But beware — cunning evil pigs guard the treasure! \
+		Thankfully, the King’s trusty Hammer is by his side, ready to smash any trouble that comes his way. \
+		Oh, and heads up — once you’ve collected all the diamonds, there’s a nasty little surprise waiting on your way back... so count your steps when you head for the exit!',
 	process: [
-		'Developed using C and the MLX42 graphics library',
-		'Solo project completed as part of my studies at Hive Helsinki',
-		'Spent approximately 5 weeks building the game from scratch'
+		'Developed in C using the MLX42 graphics library',
+		'Solo project completed during my studies at Hive Helsinki',
+		'Key features: image and event handling, map processing, enemy AI, level design',
+		'Spent approximately 5 weeks on development',
+		'My very first game ever!'
 	],
 	learnings: [
-		'Learned the fundamentals of image rendering, sprite animation, and core gameplay logic',
-		'Gained experience managing memory in larger C programs',
-		'Sparked my long-term interest in game development — my very first completed game project'
+		'Mastered the basics of image rendering, sprite animation, and core gameplay logic',
+		'Got my first taste of algorithms by implementing enemy movement and a "shortest route" pathfinder',
+		'Gained hands-on experience managing memory in larger C programs',
+		'Ignited a lasting passion for game development'
 	],
 	playUrl: 'https://github.com/panu-kangas/so_long',
 	slug: 'diamond_hunt',

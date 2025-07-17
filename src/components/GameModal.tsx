@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { FaHtml5, FaUnity, FaReact } from 'react-icons/fa'
 import { SiGodotengine, SiTypescript } from 'react-icons/si'
 import SfmlLogo from '../assets/sfml_logo.png'
@@ -46,26 +47,60 @@ const GameModal = ({
     learnings,
   } = game
 
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  // Lock body scroll on modal open, unlock on close
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [])
+
+  // Prevent scroll bubbling when at modal scroll edges
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+
+    const onWheel = (e: WheelEvent) => {
+      const { scrollTop, scrollHeight, clientHeight } = el
+      const isScrollingUp = e.deltaY < 0
+      const isScrollingDown = e.deltaY > 0
+
+      // If trying to scroll past top or bottom, prevent scroll bubbling
+      if (
+        (isScrollingUp && scrollTop === 0) ||
+        (isScrollingDown && scrollTop + clientHeight >= scrollHeight)
+      ) {
+        e.preventDefault()
+      }
+    }
+
+    el.addEventListener('wheel', onWheel, { passive: false })
+
+    return () => {
+      el.removeEventListener('wheel', onWheel)
+    }
+  }, [])
+
   return (
     <div
-	className="fixed inset-0 flex items-center justify-center z-50 p-4"
-	style={{
-		backgroundColor: stackBackgroundColor,
-		backdropFilter: 'blur(4px)',
-		WebkitBackdropFilter: 'blur(4px)',
-	}}
-	>
-
+      className="fixed inset-0 flex items-center justify-center z-50 p-4"
+      style={{
+        backgroundColor: stackBackgroundColor,
+        backdropFilter: 'blur(4px)',
+        WebkitBackdropFilter: 'blur(4px)',
+      }}
+    >
       <div
+        ref={scrollRef}
         className="text-gray-300 bg-gray-900 rounded-xl p-6 max-w-4xl w-full relative shadow-2xl overflow-auto max-h-[90vh] border-2"
         style={{
           borderColor: primaryColor,
         }}
       >
-
         {/* Top bar */}
         <div className="flex items-start justify-between relative mb-16">
-
           {/* Tech Stack Box */}
           <div
             className="p-4 rounded-md shadow-sm flex gap-8 justify-center flex-wrap border-2"
@@ -136,7 +171,7 @@ const GameModal = ({
             style={{ border: `1px solid ${borderColor}` }}
           >
             <h3 className="text-lg font-semibold mb-2" style={{ color: primaryColor }}>
-              How Was the Process?
+              Project Details
             </h3>
             <ul className="list-disc list-inside">
               {process.map((step, idx) => (
@@ -178,8 +213,8 @@ const GameModal = ({
               color: '#000',
               opacity: 0.95
             }}
-			onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
-			onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
           >
             Play Game
           </a>
