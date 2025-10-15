@@ -16,7 +16,7 @@ const Header = () => {
         <div>
           <h1 className="text-3xl font-bold text-green-500">Panu Kangas</h1>
           <p className="text-sm text-gray-400">
-            Creative game developer with versatile tech stack
+            Blending creativity and code to build something fun
           </p>
         </div>
         <nav className="mt-4 md:mt-0 flex gap-4">

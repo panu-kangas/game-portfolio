@@ -1,6 +1,6 @@
-import profileImage from '../assets/panu-profile.jpg'
 import StoryTimeline from '../components/StoryTimeline'
 import { FiExternalLink } from 'react-icons/fi'
+import { profileImage1URL } from '../data/assetURLs'
 
 const About = () => {
 	const techStack = ['C/C++', 'Godot', 'JavaScript', 'TypeScript', 'React', 'Python']
@@ -35,9 +35,10 @@ const About = () => {
 		{/* Info Card with image on top */}
 		<section className="border border-emerald-500 bg-gray-800 rounded-xl p-8 shadow-lg flex flex-col items-center text-center mb-8">
 			<img
-			src={profileImage}
-			alt="Panu Kangas"
-			className="w-44 h-44 rounded-xl border-4 border-green-400 object-cover shadow-md mb-6"
+				src={profileImage1URL}
+				alt="Panu Kangas"
+				className="w-44 h-44 rounded-xl border-4 border-green-400 object-cover shadow-md mb-6"
+				style={{ objectPosition: 'center 28%' }}
 			/>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full text-left">
@@ -90,17 +91,17 @@ const About = () => {
 			{/* CV Buttons */}
 			<div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
 				<a
-				href="/cv_panu.pdf"
+				href="/CV_Panu_Kangas.pdf"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-lg transition duration-200 text-center"
+				className="bg-green-500 hover:bg-green-400 text-black hover:text-white font-semibold px-6 py-3 rounded-lg transition duration-200 text-center flex-1 shadow-md border-3 border-green-700 hover:border-green-300 whitespace-nowrap"
 				>
 				👀 View CV
 				</a>
 				<a
-				href="/cv_panu.pdf"
+				href="/CV_Panu_Kangas.pdf"
 				download
-				className="border border-green-400 hover:border-green-300 text-green-400 hover:text-green-300 font-semibold px-6 py-3 rounded-lg transition duration-200 text-center"
+				className="bg-green-500 hover:bg-green-400 text-black hover:text-white font-semibold px-6 py-3 rounded-lg transition duration-200 text-center flex-1 shadow-md border-3 border-green-700 hover:border-green-300 whitespace-nowrap"
 				>
 				📄 Download CV
 				</a>

@@ -9,18 +9,18 @@ import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col">
-		<Header />
+      <Header />
 
-    <main className="flex-grow">
-		<ScrollToTop>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/gallery" element={<Gallery />} />
-				<Route path="/about" element={<About />} />
-			</Routes>
-		</ScrollToTop>
-
-    </main>
+      <main className="flex-grow">
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/about" element={<About />} />
+{/*            <Route path="/games/block-wars" element={<BlockWarsPage />} /> {/* ✅ Step 2: Add new route */}
+          </Routes>
+        </ScrollToTop>
+      </main>
 
       <Footer />
     </div>

@@ -6,7 +6,7 @@ const storyEvents = [
     period: "2000–2003",
     text: "I played my very first video game around the age of 6 or 7, when my older brother showed me how computers worked. I was instantly hooked. \
 He introduced me to StarCraft II and Warcraft III (wildly inappropriate for my age, by the way), which quickly became my favourites. A few years later, I got a GameBoy and an Xbox — big upgrade! \
-I spent countless hours with Pokémon, Zelda and the fast-paced action of Halo, got lost in the world of Fable, and of course, played way too much FIFA. \
+I spent countless hours with games like Pokémon, Zelda, Halo and Fable. \
 Gaming has been a hobby and personal passion of mine ever since."
   },
   {
@@ -23,7 +23,7 @@ I took a shot, got in, and spent four years studying singing, dancing, and actin
     text: "After graduating in 2016, I worked mostly at Lahti City Theatre, performing in musicals like The Full Monty (Housut Pois). \
 I later landed roles in Turku (Viimeinen Laiva, 2017), Helsinki (Musta Saara, 2018), and Tampere (The Hunchback of Notre Dame, 2019). \
 During this time I also started my voice acting career, narrating over 100 audiobooks and voicing characters like Shadow the Hedgehog (Sonic 3, 2024) and Varl (LEGO Horizon Adventures, 2024). \
-Voice acting for animated series and games is another passion of mine - something I still do nearly every week."
+Voice acting for animated series and games is another love of mine - something I still do nearly every week."
   },
   {
     title: "🤝 Co-founder of a Theatre Group",
@@ -31,7 +31,7 @@ Voice acting for animated series and games is another passion of mine - somethin
     text: "Around the time of my graduation, I also co-founded a theatre group called Musiikkiteatteri NYT with five fellow graduates. \
 We aimed to create original musical theatre about contemporary topics and did everything ourselves — writing, composing, choreographing, and performing. \
 I led the group for six years, producing five professional shows. On top of the creative work, my responsibilities included budgeting, communications, HR, marketing, and creative leadership — most of which I learned on the go! \
-Today, Musiikkiteatteri NYT is well known across Finland and has performed in many of the country’s major cities."
+Today, Musiikkiteatteri NYT is well known across Finland and has performed in most of the country’s major theatres."
   },
   {
     title: "🔄 Time for a New Direction",
@@ -47,14 +47,14 @@ It was the perfect moment to pause my theatre journey and jump into this new exc
     text: "At Hive, I fell in love with coding. The logical problem-solving was a refreshing contrast to my previous, more artistic work. \
 I dove deep into C and C++ projects, learning the fundamentals of programming — from memory management and optimized algorithms to multithreading, virtual machines, and Docker. \
 But game development excited me the most. I completed three game-related projects at Hive, and built my own games on the side to deepen my skills. \
-A new dream was born: combining my passion for creative work and coding as a game developer."
+A new dream was born: combining my enthusiasm for creative work and coding as a game developer."
   },
   {
     title: "🚀 Start of My Brand-New IT Career",
     period: "2025",
-    text: "I graduated from Hive in the summer of 2025 and started a six-month trainee role at Nokia, working with C++ and Python on embedded 5G software. \
-The work is definitely rewarding, and I learn something new every day! In my free time, I’ve mostly been building this website (😂), and once it’s done, I’m starting my biggest game project yet in Godot. \
-I can’t wait to share it with you all!"
+    text: "I graduated from Hive in the summer of 2025 and started a trainee role at Nokia right after, working with C++ and Python on embedded 5G software. \
+The work is definitely rewarding, and I learn something new every day! In my free time, I've had all sorts of coding projects going... like this portfolio app for instance. \
+I'm also soon about to release new games too, so stay tuned! 😍"
   }
 ]
 

@@ -1,22 +1,15 @@
-import labIncidentImg from '../assets/lab_incident_screenshot.png'
-import labIncidentVideo from '../assets/lab_incident_video.mov'
-import diamondHuntImg from '../assets/diamond_hunt_image.png'
-import diamondHuntVideo from '../assets/diamond_hunt_video.mov'
-import gravityChangerImg from '../assets/gravity_changer_img.png'
-import gravityChangerVideo from '../assets/gravity_changer_video.mov'
-import snakeAdventuresImg from '../assets/snake_adventures.png'
-import snakeAdventuresVideo from '../assets/snake_adventures_video.mov'
-
+import { videoURLs, imageURLs } from '../data/assetURLs'
 
 let commonBgColor = 'bg-gray-800'
 
 export const games = [
-  {
+{
 	title: 'The Lab Incident',
 	releaseDate: '01/2025',
-	previewImg: labIncidentImg,
-	videoSrc: labIncidentVideo,
+	previewImg: imageURLs.labIncident,
+	videoSrc: videoURLs.labIncident,
 	stack: ['Godot'],
+	label: 'Godot',
 	bgColor: commonBgColor,
 	shortDescription: 'Survive a lab project gone wrong! Trap foes in bubbles and send them back through a portal before they run you over.',
 	description:
@@ -39,15 +32,18 @@ export const games = [
 		'Practiced rapid ideation and prototyping',
 		'Learned the fundamentals of releasing and publishing a game online'
 	],
-	playUrl: 'https://github.com/KrolPolski/Finnish-Game-Jam-2025',
+	codeUrl: 'https://github.com/KrolPolski/Finnish-Game-Jam-2025',
+	playUrl: 'https://rlboudwin.itch.io/the-lab-incident',
 	slug: 'the-lab-incident',
-	},
-  {
+	isPlayableOnline: true
+},
+{
 	title: 'Gravity Changer',
 	releaseDate: '11/2024',
-	previewImg: gravityChangerImg,
-	videoSrc: gravityChangerVideo,
+	previewImg: imageURLs.gravityChanger,
+	videoSrc: videoURLs.gravityChanger,
 	stack: ['Cpp', 'SFML'],
+	label: 'C++',
 	bgColor: commonBgColor,
 	shortDescription: 'Bend gravity to your will in this fast-paced platformer where you flip directions to grab points, beat the clock, and defy physics.',
 	description:
@@ -66,15 +62,18 @@ export const games = [
 		'Learned firsthand the challenges of collision detection and resolution — it’s trickier than it looks!',
 		'Gained a better sense of game balance, especially around speed, points, and timer tuning'
 	],
-	playUrl: 'https://github.com/panu-kangas/Gravity_changer',
+	codeUrl: 'https://github.com/panu-kangas/Gravity_changer',
+	playUrl: '',
 	slug: 'gravity-changer',
-	},
-  {
+	isPlayableOnline: false
+},
+{
 	title: 'Snake Adventures',
 	releaseDate: '10/2024',
-	previewImg: snakeAdventuresImg,
-	videoSrc: snakeAdventuresVideo,
+	previewImg: imageURLs.snakeAdventures,
+	videoSrc: videoURLs.snakeAdventures,
 	stack: ['Cpp', 'SFML'],
+	label: 'C++',
 	bgColor: commonBgColor,
 	shortDescription: 'Dodge tower fire and gobble apples in an action-packed Snake-inspired game.',
 	description:
@@ -95,15 +94,49 @@ export const games = [
 		'Gained new insights into game UX, like balancing movement speed for a satisfying feel',
 		'Learned practical memory and resource handling — like rendering only what’s visible and cleaning up off-screen arrows'
 	],
-	playUrl: 'https://github.com/panu-kangas/Snake_SFML',
+	codeUrl: 'https://github.com/panu-kangas/Snake_SFML',
+	playUrl: '',
 	slug: 'snake_adventures',
-	},
-  {
+	isPlayableOnline: false
+},
+{
+	title: 'Maze Shooter',
+	releaseDate: '08/2024',
+	previewImg: imageURLs.mazeShooter,
+	videoSrc: videoURLs.mazeShooter,
+	stack: ['C', 'MLX'],
+	label: 'C',
+	bgColor: commonBgColor,
+	shortDescription: 'Blast your way through a monster-filled maze in this Wolfenstein-inspired 3D shooter.',
+	description:
+		'Maze Shooter is a retro-style first-person shooter that throws you into a twisted labyrinth crawling with floating monsters and lurking danger. \
+		Armed with a powerful blaster, a handy minimap, and your wits, your mission is clear: survive the threats and find the hidden exit to escape the maze. \
+		Inspired by the legendary Wolfenstein 3D, the game combines classic raycasting visuals and intense combat with strategic exploration and spatial awareness.',
+	process: [
+		'Developed in C using the MLX42 graphics library',
+		'2-developer project completed during my studies at Hive Helsinki',
+		'Key features: 3D-style maze navigation, intelligent monsters, shooting mechanics, and dynamic minimap',
+		'My main tasks included implementing the raycasting algo, enemy AI, and the minimap',
+		'Spent approximately 3 weeks on development',
+		'My first 3D game project'
+	],
+	learnings: [
+		'Learned the fundamentals of raycasting and how classic 3D rendering works in a 2D engine',
+		'Deepened my understanding of enemy design through patrol, detection, and chasing behaviors',
+		'Designed and implemented a dynamic minimap that updates based on the maze layout',
+	],
+	codeUrl: 'https://github.com/panu-kangas/Cub3d',
+	playUrl: '',
+	slug: 'maze_shooter',
+	isPlayableOnline: false
+},
+{
 	title: 'Diamond Hunt',
 	releaseDate: '04/2024',
-	previewImg: diamondHuntImg,
-	videoSrc: diamondHuntVideo,
+	previewImg: imageURLs.diamondHunt,
+	videoSrc: videoURLs.diamondHunt,
 	stack: ['C', 'MLX'],
+	label: 'C',
 	bgColor: commonBgColor,
 	shortDescription: 'Play as a hammer-swinging king on a quest to reclaim his lost diamonds while battling mischievous pigs in a 2D adventure.',
 	description:
@@ -124,8 +157,10 @@ export const games = [
 		'Gained hands-on experience managing memory in larger C programs',
 		'Ignited a lasting passion for game development'
 	],
-	playUrl: 'https://github.com/panu-kangas/so_long',
+	codeUrl: 'https://github.com/panu-kangas/so_long',
+	playUrl: '',
 	slug: 'diamond_hunt',
-	},
+	isPlayableOnline: false
+}
 ]
 

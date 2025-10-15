@@ -1,10 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FaHtml5, FaUnity, FaReact } from 'react-icons/fa'
 import { SiGodotengine, SiTypescript } from 'react-icons/si'
-import SfmlLogo from '../assets/sfml_logo.png'
-import CLogo from '../assets/c_logo.png'
-import CppLogo from '../assets/c++_logo.png'
-import MlxLogo from '../assets/mlx_icon.png'
+import { iconURLs } from '../data/assetURLs'
 import type { GameCardProps } from '../data/types'
 
 interface GameModalProps {
@@ -22,10 +20,10 @@ const techIcons: Record<string, JSX.Element> = {
   React: <FaReact className="text-blue-400 text-3xl" />,
   Godot: <SiGodotengine className="text-purple-400 text-3xl" />,
   TypeScript: <SiTypescript className="text-blue-500 text-3xl" />,
-  C: <img src={CLogo} alt="C" className="w-8 h-8" />,
-  Cpp: <img src={CppLogo} alt="C++" className="w-8 h-8" />,
-  SFML: <img src={SfmlLogo} alt="SFML" className="w-22 h-8" />,
-  MLX: <img src={MlxLogo} alt="MLX42" className="w-15 h-9" />
+  C: <img src={iconURLs.c} alt="C" className="w-8 h-8" />,
+  Cpp: <img src={iconURLs.cpp} alt="C++" className="w-8 h-8" />,
+  SFML: <img src={iconURLs.sfml} alt="SFML" className="w-22 h-8" />,
+  MLX: <img src={iconURLs.mlx} alt="MLX42" className="w-15 h-9" />
 }
 
 const GameModal = ({
@@ -41,13 +39,17 @@ const GameModal = ({
     releaseDate,
     videoSrc,
     stack,
+	label,
     description,
     playUrl,
+	codeUrl,
     process,
     learnings,
+	isPlayableOnline
   } = game
 
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   // Lock body scroll on modal open, unlock on close
   useEffect(() => {
@@ -119,13 +121,13 @@ const GameModal = ({
           </div>
 
           {/* Title & Date */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
-            <h2 className="text-3xl font-bold" style={{ color: primaryColor }}>
+          <div className="absolute left-1/2 transform -translate-x-1/2 text-center mb-2">
+            <h2 className="text-3xl font-bold mb-2" style={{ color: primaryColor }}>
               {title}
             </h2>
-            <p className="text-xs bg-gray-700 text-gray-200 rounded-3xl px-2 py-1 mt-1">
-              Game finished: {releaseDate}
-            </p>
+            <span className="text-[0.9rem] text-emerald-300 bg-emerald-800 px-2 py-[2px] rounded-full mt-1">
+              Developed: {releaseDate}
+            </span>
           </div>
 
           {/* Close Button */}
@@ -144,14 +146,23 @@ const GameModal = ({
           className="w-full mb-6 border-2 rounded-lg overflow-hidden shadow-md"
           style={{ borderColor: primaryColor }}
         >
-          <video
-            src={videoSrc}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full max-h-[500px] object-contain"
-          />
+
+			{!isVideoLoaded && (
+				<div className="absolute inset-0 flex items-center justify-center bg-gray-800 animate-pulse z-10">
+					<span className="text-gray-400">Loading video...</span>
+				</div>
+			)}
+
+			<video
+				src={videoSrc}
+				autoPlay
+				muted
+				loop
+				playsInline
+				className="w-full max-h-[500px] object-contain"
+				onLoadedData={() => setIsVideoLoaded(true)}
+				style={{ opacity: isVideoLoaded ? 1 : 0 }}
+			/>
         </div>
 
         {/* Info Content */}
@@ -197,27 +208,63 @@ const GameModal = ({
 
         {/* Footer Buttons */}
         <div className="flex gap-4 justify-end mt-6">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 rounded-md border border-white hover:bg-white hover:text-black transition cursor-pointer"
-          >
-            Return
-          </button>
-          <a
-            href={playUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-md"
-            style={{
-              backgroundColor: primaryColor,
-              color: '#000',
-              opacity: 0.95
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
-          >
-            Play Game
-          </a>
+			<button
+				onClick={onClose}
+				className="px-4 py-2 rounded-md border border-white hover:bg-white hover:text-black transition cursor-pointer"
+			>
+				Return
+			</button>
+          	{isPlayableOnline ? (
+				<>
+					<a
+						href={game.codeUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="px-4 py-2 rounded-md"
+						style={{
+							backgroundColor: primaryColor,
+							color: '#000',
+							opacity: 0.95,
+						}}
+						onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+						onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
+					>
+					View code in GitHub
+					</a>
+
+					<a
+						href={playUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="px-4 py-2 rounded-md"
+						style={{
+							backgroundColor: primaryColor,
+							color: '#000',
+							opacity: 0.95,
+						}}
+						onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+						onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
+					>
+					Play online in itch.io
+					</a>
+				</>
+				) : (
+					<a
+						href={game.codeUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="px-4 py-2 rounded-md"
+						style={{
+						backgroundColor: primaryColor,
+						color: '#000',
+						opacity: 0.95,
+						}}
+						onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+						onMouseLeave={(e) => (e.currentTarget.style.color = '#000')}
+					>
+					View code & download game in GitHub
+					</a>
+				)}
         </div>
       </div>
     </div>
