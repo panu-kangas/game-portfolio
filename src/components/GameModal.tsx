@@ -22,8 +22,8 @@ const techIcons: Record<string, JSX.Element> = {
   TypeScript: <SiTypescript className="text-blue-500 text-3xl" />,
   C: <img src={iconURLs.c} alt="C" className="w-8 h-8" />,
   Cpp: <img src={iconURLs.cpp} alt="C++" className="w-8 h-8" />,
-  SFML: <img src={iconURLs.sfml} alt="SFML" className="w-22 h-8" />,
-  MLX: <img src={iconURLs.mlx} alt="MLX42" className="w-15 h-9" />
+  SFML: <img src={iconURLs.sfml} alt="SFML" className="w-20 h-6" />,
+  MLX: <img src={iconURLs.mlx} alt="MLX42" className="w-13 h-7" />
 }
 
 const GameModal = ({
@@ -104,21 +104,22 @@ const GameModal = ({
         {/* Top bar */}
         <div className="flex items-start justify-between relative mb-16">
           {/* Tech Stack Box */}
-          <div
-            className="p-4 rounded-md shadow-sm flex gap-8 justify-center flex-wrap border-2"
-            style={{
-              borderColor: primaryColor,
-              backgroundColor: 'rgba(255,255,255,0.05)'
-            }}
-          >
-            {stack.map((tech) => (
-              <div key={tech} className="flex flex-col items-center text-gray-300 text-sm">
-                <span className="mb-1 flex justify-center">
-                  {techIcons[tech]}
-                </span>
-              </div>
-            ))}
-          </div>
+		<div
+			className="p-4 rounded-md shadow-sm flex flex-col gap-4 items-center border-2"
+			style={{
+				borderColor: primaryColor,
+				backgroundColor: 'rgba(255,255,255,0.05)'
+			}}
+		>
+			{stack.map((tech) => (
+				<div key={tech} className="flex flex-col items-center text-gray-300 text-sm">
+				<span className="flex justify-center">
+					{techIcons[tech]}
+				</span>
+				</div>
+			))}
+		</div>
+
 
           {/* Title & Date */}
           <div className="absolute left-1/2 transform -translate-x-1/2 text-center mb-2">
