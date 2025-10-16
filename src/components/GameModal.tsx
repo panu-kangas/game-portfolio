@@ -107,13 +107,12 @@ const GameModal = ({
 				backgroundColor: 'rgba(255,255,255,0.05)'
 			}}
 		>
-			{stack.map((tech) => (
-				<div key={tech} className="flex flex-col items-center text-gray-300 text-sm">
-				<span className="flex justify-center">
-					{techIcons[tech]}
-				</span>
-				</div>
-			))}
+
+			<div key={stack[0]} className="flex flex-col items-center text-gray-300 text-sm">
+			<span className="flex justify-center">
+				{techIcons[stack[0]]}
+			</span>
+			</div>
 		</div>
 
 
