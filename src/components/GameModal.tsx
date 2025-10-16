@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { FaHtml5, FaUnity, FaReact } from 'react-icons/fa'
 import { SiGodotengine, SiTypescript } from 'react-icons/si'
 import { iconURLs } from '../data/assetURLs'
@@ -14,7 +13,7 @@ interface GameModalProps {
   stackBackgroundColor: string
 }
 
-const techIcons: Record<string, JSX.Element> = {
+const techIcons: Record<string, React.JSX.Element> = {
   HTML5: <FaHtml5 className="text-orange-500 text-3xl" />,
   Unity: <FaUnity className="text-white text-3xl" />,
   React: <FaReact className="text-blue-400 text-3xl" />,
@@ -30,7 +29,6 @@ const GameModal = ({
   game,
   onClose,
   primaryColor,
-  backgroundColor,
   borderColor,
   stackBackgroundColor
 }: GameModalProps) => {
@@ -39,10 +37,8 @@ const GameModal = ({
     releaseDate,
     videoSrc,
     stack,
-	label,
     description,
     playUrl,
-	codeUrl,
     process,
     learnings,
 	isPlayableOnline
