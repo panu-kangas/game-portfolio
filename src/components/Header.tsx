@@ -12,12 +12,14 @@ const Header = () => {
 
   return (
     <header className="bg-gray-800 text-white shadow-lg sticky top-0 z-50">
-      <div className="mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+      <div className="mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-green-500">Panu Kangas</h1>
-          <p className="text-sm text-gray-400">
-            Blending creativity and code to build something fun
-          </p>
+			<Link to="/">
+				<h1 className="text-3xl font-bold text-green-500 cursor-pointer">Panu Kangas</h1>
+				<p className="text-sm text-gray-400 cursor-pointer">
+					Blending creativity and code to build something fun
+				</p>
+			</Link>
         </div>
         <nav className="mt-4 md:mt-0 flex gap-4">
           <Link to="/" className={navLinkClasses('/')}>

@@ -17,7 +17,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
-{/*            <Route path="/games/block-wars" element={<BlockWarsPage />} /> {/* ✅ Step 2: Add new route */}
           </Routes>
         </ScrollToTop>
       </main>

@@ -65,7 +65,6 @@ const GameModal = ({
       const isScrollingUp = e.deltaY < 0
       const isScrollingDown = e.deltaY > 0
 
-      // If trying to scroll past top or bottom, prevent scroll bubbling
       if (
         (isScrollingUp && scrollTop === 0) ||
         (isScrollingDown && scrollTop + clientHeight >= scrollHeight)
@@ -129,7 +128,7 @@ const GameModal = ({
           {/* Close Button */}
           <div className="w-[48px] flex justify-end">
             <button
-              className="text-gray-300 text-2xl hover:text-red-500 cursor-pointer"
+              className="text-gray-300 text-2xl hover:text-red-500 cursor-pointer z-20"
               onClick={onClose}
             >
               ✕
@@ -139,27 +138,29 @@ const GameModal = ({
 
         {/* Video */}
         <div
-          className="w-full mb-6 border-2 rounded-lg overflow-hidden shadow-md"
-          style={{ borderColor: primaryColor }}
-        >
-
+		className="relative w-full mb-6 border-2 rounded-lg overflow-hidden shadow-md"
+		style={{ borderColor: primaryColor }}
+		>
+		<div className="relative w-full pt-[56.25%] bg-black">
 			{!isVideoLoaded && (
-				<div className="absolute inset-0 flex items-center justify-center bg-gray-800 animate-pulse z-10">
-					<span className="text-gray-400">Loading video...</span>
-				</div>
+			<div className="absolute inset-0 flex items-center justify-center bg-gray-800 animate-pulse z-10">
+				<span className="text-gray-400">Loading video...</span>
+			</div>
 			)}
 
 			<video
-				src={videoSrc}
-				autoPlay
-				muted
-				loop
-				playsInline
-				className="w-full max-h-[500px] object-contain"
-				onLoadedData={() => setIsVideoLoaded(true)}
-				style={{ opacity: isVideoLoaded ? 1 : 0 }}
+			src={videoSrc}
+			autoPlay
+			muted
+			loop
+			playsInline
+			className="absolute top-0 left-0 w-full h-full object-contain"
+			onLoadedData={() => setIsVideoLoaded(true)}
+			style={{ opacity: isVideoLoaded ? 1 : 0 }}
 			/>
-        </div>
+		</div>
+		</div>
+
 
         {/* Info Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-gray-300">

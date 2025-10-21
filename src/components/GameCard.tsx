@@ -1,21 +1,6 @@
 import { useState } from 'react'
-//import { FaHtml5, FaUnity, FaReact } from 'react-icons/fa'
-//import { SiGodotengine, SiTypescript } from 'react-icons/si'
-//import { iconURLs } from '../data/assetURLs'
 import type { GameCardProps } from '../data/types'
 import GameModal from './GameModal'
-
-/* const techIcons: Record<string, JSX.Element> = {
-  HTML5: <FaHtml5 className="text-orange-500 text-4xl" />,
-  Unity: <FaUnity className="text-white text-4xl" />,
-  React: <FaReact className="text-blue-400 text-4xl" />,
-  Godot: <SiGodotengine className="text-purple-400 text-4xl" />,
-  TypeScript: <SiTypescript className="text-blue-500 text-4xl" />,
-  C: <img src={iconURLs.c} alt="C" className="w-9 h-9" />,
-  Cpp: <img src={iconURLs.cpp} alt="C++" className="w-9 h-9" />,
-  SFML: <img src={iconURLs.sfml} alt="SFML" className="w-25 h-9" />,
-  MLX: <img src={iconURLs.mlx} alt="MLX42" className="w-15 h-9" />
-} */
 
 const GameCard = (props: GameCardProps & {
   borderClass?: string,
@@ -34,7 +19,6 @@ const GameCard = (props: GameCardProps & {
   Cpp: { label: 'C++', color: 'text-indigo-300', bg: 'bg-indigo-900/90' },
   TypeScript: { label: 'TypeScript', color: 'text-sky-400', bg: 'bg-sky-900/90' },
 }
-
 
   const {
     title,
