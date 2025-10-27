@@ -1,27 +1,27 @@
 
-export const profileImage1URL = 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516935/panu-profile_zdyf0y.jpg'
-export const profileImage2URL = 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760539094/IMG_6848_do66o4.jpg'
+export const profileImage1URL = '/images/panu_profile_1.webp'
+export const profileImage2URL = '/images/panu_profile_2.webp'
 
 export const videoURLs = {
-	teaser: 'https://res.cloudinary.com/dtc2blhwi/video/upload/v1760542512/game_teaser_for_portfolio_agkde8.mp4',
-	labIncident: 'https://res.cloudinary.com/dtc2blhwi/video/upload/v1760516963/lab_incident_video_bm2bf9.mov',
-	diamondHunt: 'https://res.cloudinary.com/dtc2blhwi/video/upload/v1760516967/diamond_hunt_video_bhrnzo.mov',
-	mazeShooter: 'https://res.cloudinary.com/dtc2blhwi/video/upload/v1760516948/maze_shooter_zdslyv.mp4',
-	gravityChanger: 'https://res.cloudinary.com/dtc2blhwi/video/upload/v1760516938/gravity_changer_video_updroz.mov',
-	snakeAdventures: 'https://res.cloudinary.com/dtc2blhwi/video/upload/v1760516964/snake_adventures_video_krpejv.mov'
+	teaser: 'https://www.youtube.com/embed/46hvBF-LBg0?autoplay=1&mute=1&loop=1&playlist=46hvBF-LBg0&modestbranding=1&controls=0&rel=0',
+	labIncident: 'https://www.youtube.com/embed/YVExBP-YX08?autoplay=1&mute=1&loop=1&playlist=YVExBP-YX08&modestbranding=1&controls=0&rel=0',
+	diamondHunt: 'https://www.youtube.com/embed/I9FEBkjiU34?autoplay=1&mute=1&loop=1&playlist=I9FEBkjiU34&modestbranding=1&controls=0&rel=0',
+	mazeShooter: 'https://www.youtube.com/embed/m7hA2ElXESM?autoplay=1&mute=1&loop=1&playlist=m7hA2ElXESM&modestbranding=1&controls=0&rel=0',
+	gravityChanger: 'https://www.youtube.com/embed/cY3cfVtlbtA?autoplay=1&mute=1&loop=1&playlist=cY3cfVtlbtA&modestbranding=1&controls=0&rel=0',
+	snakeAdventures: 'https://www.youtube.com/embed/y2wVuEMDLFQ?autoplay=1&mute=1&loop=1&playlist=y2wVuEMDLFQ&modestbranding=1&controls=0&rel=0'
 }
 
 export const imageURLs = {
-  labIncident: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516936/lab_incident_screenshot_tgx2ln.png',
-  diamondHunt: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516935/diamond_hunt_image_rayo8p.png',
-  mazeShooter: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516943/maze_shooter_image_rxf5pk.png',
-  gravityChanger: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516944/gravity_changer_img_jfl6kl.png',
-  snakeAdventures: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516943/snake_adventures_urwqcz.png',
+  labIncident: '/images/lab_incident_screenshot.png',
+  diamondHunt: '/images/diamond_hunt_image.webp',
+  mazeShooter: '/images/maze_shooter_image.webp',
+  gravityChanger: '/images/gravity_changer_img.png',
+  snakeAdventures: '/images/snake_adventures.webp',
 };
 
 export const iconURLs = {
-  sfml: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516939/sfml_logo_oow5ku.png',
-  c: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516945/c_logo_qkrlxd.png',
-  cpp: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516939/c__logo_vsowxu.png',
-  mlx: 'https://res.cloudinary.com/dtc2blhwi/image/upload/v1760516943/mlx_icon_iwuf5b.png',
+  sfml: '/icons/sfml_logo.png',
+  c: '/icons/c_logo.png',
+  cpp: '/icons/cpp_logo.png',
+  mlx: '/icons/mlx_icon.png',
 };

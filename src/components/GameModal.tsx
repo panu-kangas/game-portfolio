@@ -137,29 +137,30 @@ const GameModal = ({
         </div>
 
         {/* Video */}
-        <div
-		className="relative w-full mb-6 border-2 rounded-lg overflow-hidden shadow-md"
-		style={{ borderColor: primaryColor }}
-		>
-		<div className="relative w-full pt-[56.25%] bg-black">
-			{!isVideoLoaded && (
-			<div className="absolute inset-0 flex items-center justify-center bg-gray-800 animate-pulse z-10">
-				<span className="text-gray-400">Loading video...</span>
-			</div>
-			)}
+<div
+  className="relative w-full mb-6 border-2 rounded-lg overflow-hidden shadow-md"
+  style={{ borderColor: primaryColor }}
+>
+  <div className="relative w-full pt-[56.25%] bg-black">
+    {/* Loading placeholder */}
+    {!isVideoLoaded && (
+      <div className="absolute inset-0 flex items-center justify-center bg-gray-800 animate-pulse z-10">
+        <span className="text-gray-400">Loading video...</span>
+      </div>
+    )}
 
-			<video
-			src={videoSrc}
-			autoPlay
-			muted
-			loop
-			playsInline
-			className="absolute top-0 left-0 w-full h-full object-contain"
-			onLoadedData={() => setIsVideoLoaded(true)}
-			style={{ opacity: isVideoLoaded ? 1 : 0 }}
-			/>
-		</div>
-		</div>
+    {/* YouTube iframe */}
+    <iframe
+      src={videoSrc}
+      className="absolute top-0 left-0 w-full h-full"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      onLoad={() => setIsVideoLoaded(true)}
+      title="Game Clip"
+      loading="lazy"
+    />
+  </div>
+</div>
 
 
         {/* Info Content */}

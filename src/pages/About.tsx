@@ -1,6 +1,6 @@
 import StoryTimeline from '../components/StoryTimeline'
 import { FiExternalLink } from 'react-icons/fi'
-import { profileImage1URL } from '../data/assetURLs'
+import { profileImage2URL } from '../data/assetURLs'
 
 const About = () => {
 	const techStack = ['C/C++', 'Godot', 'JavaScript', 'TypeScript', 'React', 'Python']
@@ -35,7 +35,7 @@ const About = () => {
 		{/* Info Card with image on top */}
 		<section className="border border-emerald-500 bg-gray-800 rounded-xl p-8 shadow-lg flex flex-col items-center text-center mb-8">
 			<img
-				src={profileImage1URL}
+				src={profileImage2URL}
 				alt="Panu Kangas"
 				className="w-44 h-44 rounded-xl border-4 border-green-400 object-cover shadow-md mb-6"
 				style={{ objectPosition: 'center 28%' }}

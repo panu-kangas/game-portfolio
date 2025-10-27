@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { profileImage2URL, videoURLs } from '../data/assetURLs'
+import { profileImage1URL, videoURLs } from '../data/assetURLs'
 
 const Home = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -13,7 +13,7 @@ const Home = () => {
         {/* Top row: photo + intro text + CTAs */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
           <img
-            src={profileImage2URL}
+            src={profileImage1URL}
             alt="Panu Kangas"
             className="w-48 h-48 rounded-full border-4 border-green-400 shadow-lg object-cover"
           />
@@ -42,20 +42,30 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 max-w-md">
-              <Link
-                to="/gallery"
+				<Link
+					to="/gallery"
+					className="bg-green-500 hover:bg-green-400 text-black hover:text-white font-semibold px-6 py-3 rounded-lg transition duration-200 text-center flex-1 shadow-md border-3 border-green-700 hover:border-green-300 whitespace-nowrap"
+				>
+					🎮 View My Games
+				</Link>
+			<>
+				<a
+				href="/CV_Panu_Kangas.pdf"
+				target="_blank"
+				rel="noopener noreferrer"
 				className="bg-green-500 hover:bg-green-400 text-black hover:text-white font-semibold px-6 py-3 rounded-lg transition duration-200 text-center flex-1 shadow-md border-3 border-green-700 hover:border-green-300 whitespace-nowrap"
-              >
-                🎮 View My Games
-              </Link>
-			  <>
-              <Link
-                to="/about"
-				className="bg-green-500 hover:bg-green-400 text-black hover:text-white font-semibold px-6 py-3 rounded-lg transition duration-200 text-center flex-1 shadow-md border-3 border-green-700 hover:border-green-300 whitespace-nowrap"
-              >
-                🙋‍♂️ More About Me
-              </Link>
-              </>
+				>
+				👀 View CV
+				</a>
+			</>
+			<>
+				<Link
+					to="/about"
+					className="bg-green-500 hover:bg-green-400 text-black hover:text-white font-semibold px-6 py-3 rounded-lg transition duration-200 text-center flex-1 shadow-md border-3 border-green-700 hover:border-green-300 whitespace-nowrap"
+				>
+					🙋‍♂️ More About Me
+				</Link>
+			</>
             </div>
           </div>
         </div>
@@ -73,18 +83,18 @@ const Home = () => {
 
 			{/* Aspect-ratio wrapper */}
 			<div className="relative w-full pb-[56.25%]"> {/* 16:9 aspect ratio */}
-				<video
+				<iframe
 				src={videoURLs.teaser}
-				autoPlay
-				loop
-				muted
-				playsInline
-				className="absolute top-0 left-0 w-full h-full object-contain"
-				style={{ opacity: isVideoLoaded ? 1 : 0 }}
-				onLoadedData={() => setIsVideoLoaded(true)}
+				className="absolute top-0 left-0 w-full h-full"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowFullScreen
+				onLoad={() => setIsVideoLoaded(true)}
+				title="Landing Page Teaser"
+				loading="lazy"
 				/>
 			</div>
 		</div>
+
       </section>
     </div>
   );
