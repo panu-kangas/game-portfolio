@@ -4,6 +4,38 @@ let commonBgColor = 'bg-gray-800'
 
 export const games = [
 {
+  title: 'Space Invaders',
+  releaseDate: '10/2025',
+  previewImg: imageURLs.spaceInvaders,
+  videoSrc: videoURLs.spaceInvaders,
+  stack: ['Cpp', 'SFML'],
+  label: 'C++',
+  bgColor: commonBgColor,
+  shortDescription: 'Take control of your spaceship and unleash rapid fire on invading aliens! Interstellar fun created in just 10 hours.',
+  description:
+    'The 10-hour Space Invaders Challenge is exactly what it sounds like: \
+	a mad dash to recreate the classic alien-blasting action game in a single day. \
+	Starting with a simple base code, we had to turn rudimentary rectangles into a full-fledged space shooter. \
+	By the end of the day, the game had working player abilities, a score system, and relentless alien waves hurtling your way. \
+	Hop on board and save the Earth in this little cosmic mayhem!',
+  process: [
+    'Developed using C++ and the SFML library',
+	'Solo project created during a 10 hour coding challenge',
+    'Key features: game state system, player ability handling, collision detection, and score tracking',
+    'Tested frantically and patched bugs on the fly'
+  ],
+  learnings: [
+    'Learned how to rapidly prototype and prioritize core mechanics',
+    'Improved my ability to debug under extreme time pressure',
+    'Discovered how inheritance and base classes help to create solid code faster',
+	'Got important lesson about the importance of game testing; there is no solid game without it!'
+  ],
+  codeUrl: 'https://github.com/panu-kangas/space_invaders_challenge',
+  playUrl: '',
+  slug: 'space-invaders-10h',
+  isPlayableOnline: false
+},
+{
 	title: 'The Lab Incident',
 	releaseDate: '01/2025',
 	previewImg: imageURLs.labIncident,

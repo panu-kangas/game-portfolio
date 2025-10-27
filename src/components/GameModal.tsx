@@ -46,32 +46,32 @@ const GameModal = ({
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
+  
+	// Lock body scroll on modal open, unlock on close
+	useEffect(() => {
+		document.body.style.overflow = 'hidden'
+		return () => {
+		document.body.style.overflow = ''
+		}
+	}, [])
 
-  // Lock body scroll on modal open, unlock on close
-  useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [])
+	// Prevent scroll bubbling when at modal scroll edges
+	useEffect(() => {
+		const el = scrollRef.current
+		if (!el) return
 
-  // Prevent scroll bubbling when at modal scroll edges
-  useEffect(() => {
-    const el = scrollRef.current
-    if (!el) return
+		const onWheel = (e: WheelEvent) => {
+		const { scrollTop, scrollHeight, clientHeight } = el
+		const isScrollingUp = e.deltaY < 0
+		const isScrollingDown = e.deltaY > 0
 
-    const onWheel = (e: WheelEvent) => {
-      const { scrollTop, scrollHeight, clientHeight } = el
-      const isScrollingUp = e.deltaY < 0
-      const isScrollingDown = e.deltaY > 0
-
-      if (
-        (isScrollingUp && scrollTop === 0) ||
-        (isScrollingDown && scrollTop + clientHeight >= scrollHeight)
-      ) {
-        e.preventDefault()
-      }
-    }
+		if (
+			(isScrollingUp && scrollTop === 0) ||
+			(isScrollingDown && scrollTop + clientHeight >= scrollHeight)
+		) {
+			e.preventDefault()
+		}
+	}
 
     el.addEventListener('wheel', onWheel, { passive: false })
 
