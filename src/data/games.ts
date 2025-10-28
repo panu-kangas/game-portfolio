@@ -11,7 +11,7 @@ export const games = [
   stack: ['Cpp', 'SFML'],
   label: 'C++',
   bgColor: commonBgColor,
-  shortDescription: 'Take control of your spaceship and unleash rapid fire on invading aliens! Interstellar fun created in just 10 hours.',
+  shortDescription: 'Interstellar fun created in just 10 hours! Take control of the spaceship and unleash rapid fire on invading aliens.',
   description:
     'The 10-hour Space Invaders Challenge is exactly what it sounds like: \
 	a mad dash to recreate the classic alien-blasting action game in a single day. \

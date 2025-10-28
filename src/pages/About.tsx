@@ -48,11 +48,6 @@ const About = () => {
 				</div>
 
 				<div className="bg-gray-700/40 border border-gray-600 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
-					<h3 className="text-green-500 font-semibold text-lg mb-1">Location</h3>
-					<p className="text-gray-300 text-base">Finland</p>
-				</div>
-
-				<div className="bg-gray-700/40 border border-gray-600 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
 					<h3 className="text-green-500 font-semibold text-lg mb-1">Education</h3>
 					<p className="text-gray-300 text-base flex items-center gap-2">
 					Hive Helsinki
@@ -81,6 +76,11 @@ const About = () => {
 				<div className="bg-gray-700/40 border border-gray-600 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
 					<h3 className="text-green-500 font-semibold text-lg mb-1">Favorite Games</h3>
 					<Pills items={favGames} />
+				</div>
+
+				<div className="bg-gray-700/40 border border-gray-600 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
+					<h3 className="text-green-500 font-semibold text-lg mb-1">Location</h3>
+					<p className="text-gray-300 text-base">Finland</p>
 				</div>
 			</div>
 			{/* Contact Info Box */}
