@@ -101,12 +101,14 @@ const GameCard = (props: GameCardProps & {
         </div>
 
 		{isGameJam && (
-			<span
-				className="absolute bottom-2 left-2 text-[0.7rem] text-red-100 bg-red-900 px-2 py-[2px] rounded-full w-fit"
-			>
-				Game Jam
-			</span>
+		<span
+			className="text-[0.7rem] text-red-100 bg-red-900 px-2 py-[2px] rounded-full text-center"
+			style={{ transform: 'translateY(8px)' }}
+		>
+			Game Jam
+		</span>
 		)}
+
 
 
       </div>
