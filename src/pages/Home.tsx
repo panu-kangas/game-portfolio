@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen px-6 py-16 flex items-center justify-center">
-      <section className="border border-emerald-500 rounded-xl p-8 md:p-12 bg-gray-800 shadow-xl w-full max-w-5xl flex flex-col items-center text-center">
+      <section className="border border-emerald-500 rounded-xl p-6 md:p-8 bg-gray-800 shadow-xl w-full max-w-5xl flex flex-col items-center text-center">
         
         {/* --- HEADER --- */}
         <h1 className="text-5xl font-extrabold text-green-500 mb-3">
