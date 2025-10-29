@@ -98,7 +98,7 @@ const GameModal = ({
         }}
       >
         {/* Top bar */}
-        <div className="flex items-start justify-between relative mb-16">
+        <div className="flex items-start justify-between relative mb-10">
           {/* Tech Stack Box */}
 		<div
 			className="p-4 rounded-md shadow-sm flex flex-col gap-4 items-center border-2"
@@ -117,7 +117,7 @@ const GameModal = ({
 
 
           {/* Title & Date */}
-		<div className="flex flex-col items-center text-center mb-6 w-full">
+		<div className="flex flex-col items-center text-center w-full">
             <h2 className="text-3xl font-bold mb-2" style={{ color: primaryColor }}>
               {title}
             </h2>
