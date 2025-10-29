@@ -14,9 +14,9 @@ const GameCard = (props: GameCardProps & {
 
   // color map
   const techStackMeta: Record<string, { label: string; color: string; bg: string }> = {
-  Godot: { label: 'Godot', color: 'text-purple-300', bg: 'bg-purple-900/90' },
-  C: { label: 'C', color: 'text-blue-300', bg: 'bg-blue-900/90' },
-  Cpp: { label: 'C++', color: 'text-indigo-300', bg: 'bg-indigo-900/90' },
+  Godot: { label: 'Godot', color: 'text-purple-200', bg: 'bg-purple-900/90' },
+  C: { label: 'C', color: 'text-blue-200', bg: 'bg-blue-800/80' },
+  Cpp: { label: 'C++', color: 'text-indigo-200', bg: 'bg-indigo-800/80' },
   TypeScript: { label: 'TypeScript', color: 'text-sky-400', bg: 'bg-sky-900/90' },
 }
 
@@ -28,7 +28,8 @@ const GameCard = (props: GameCardProps & {
     bgColor,
     borderClass = 'border-gray-600',
     stackLabel,
-	stackName
+	stackName,
+	isGameJam
   } = props
 
   const stackMeta = stackName ? techStackMeta[stackName] : undefined
@@ -98,7 +99,18 @@ const GameCard = (props: GameCardProps & {
             {shortDescription}
           </p>
         </div>
+
+		{isGameJam && (
+			<span
+				className="absolute bottom-2 left-2 text-[0.7rem] text-red-100 bg-red-900 px-2 py-[2px] rounded-full w-fit"
+			>
+				Game Jam
+			</span>
+		)}
+
+
       </div>
+
 
       {/* Modal */}
       {modalOpen && (

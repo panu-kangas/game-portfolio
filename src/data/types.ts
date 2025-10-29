@@ -14,4 +14,5 @@ export interface GameCardProps {
   playUrl: string
   slug: string
   isPlayableOnline: boolean
+  isGameJam: boolean
 }

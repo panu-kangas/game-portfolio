@@ -41,7 +41,8 @@ const GameModal = ({
     playUrl,
     process,
     learnings,
-	isPlayableOnline
+	isPlayableOnline,
+	isGameJam
   } = game
 
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -120,9 +121,18 @@ const GameModal = ({
             <h2 className="text-3xl font-bold mb-2" style={{ color: primaryColor }}>
               {title}
             </h2>
+
             <span className="text-[0.9rem] text-emerald-300 bg-emerald-800 px-2 py-[2px] rounded-full mt-1">
               Developed: {releaseDate}
             </span>
+			<br/>
+			{isGameJam && (
+				<span
+					className="text-[0.8rem] text-red-100 bg-red-900 px-2 py-[2px] rounded-full w-fit relative top-2"
+				>
+					Game Jam
+				</span>
+			)}
           </div>
 
           {/* Close Button */}
