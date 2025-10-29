@@ -24,7 +24,7 @@ const Home = () => {
               <span className="text-gray-400 text-lg">Loading video...</span>
             </div>
           )}
-		<div className="relative -mx-4 sm:mx-0 w-[calc(100%+2rem)] sm:w-full pb-[56.25%]">
+          <div className="relative w-full pb-[56.25%]">
             <iframe
               src={videoURLs.teaser}
               className="absolute top-0 left-0 w-full h-full"
