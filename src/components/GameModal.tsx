@@ -117,7 +117,7 @@ const GameModal = ({
 
 
           {/* Title & Date */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 text-center mb-2">
+		<div className="flex flex-col items-center text-center mb-6 w-full">
             <h2 className="text-3xl font-bold mb-2" style={{ color: primaryColor }}>
               {title}
             </h2>
@@ -125,7 +125,6 @@ const GameModal = ({
             <span className="text-[0.9rem] text-emerald-300 bg-emerald-800 px-2 py-[2px] rounded-full mt-1">
               Developed: {releaseDate}
             </span>
-			<br/>
 			{isGameJam && (
 				<span
 					className="text-[0.8rem] text-red-100 bg-red-900 px-2 py-[2px] rounded-full w-fit relative top-2"
@@ -133,10 +132,10 @@ const GameModal = ({
 					Game Jam
 				</span>
 			)}
-          </div>
+        </div>
 
           {/* Close Button */}
-          <div className="w-[48px] flex justify-end">
+        <div className="w-[48px] flex justify-end">
             <button
               className="text-gray-300 text-2xl hover:text-red-500 cursor-pointer z-20"
               onClick={onClose}
