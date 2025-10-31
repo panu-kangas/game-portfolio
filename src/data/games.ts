@@ -22,7 +22,8 @@ export const games = [
     'Developed using C++ and the SFML library',
 	'Solo project created during a 10 hour coding challenge',
     'Key features: game state system, player ability handling, collision detection, and score tracking',
-    'Tested frantically and patched bugs on the fly'
+    'Tested frantically and patched bugs on the fly',
+	'Game assets are not done by me, their credits can be found from the project\'s GitHub page'
   ],
   learnings: [
     'Learned how to prioritize core mechanics over small details',
@@ -121,7 +122,8 @@ export const games = [
 		'Solo project created during my free time',
 		'Key features: Snake movement, apple collection system, tower AI and arrow tracking, Power Boost ability',
 		'Completed over the course of approximately 4 weeks',
-		'First project with this tech stack'
+		'First project with this tech stack',
+		'Game assets are not done by me, their credits can be found from the project\'s GitHub page'
 	],
 	learnings: [
 		'Learned the fundamentals of SFML and how to apply it to game development',
@@ -154,7 +156,9 @@ export const games = [
 		'Key features: 3D-style maze navigation, intelligent monsters, shooting mechanics, and dynamic minimap',
 		'My main tasks included implementing the raycasting algo, enemy AI, and the minimap',
 		'Spent approximately 3 weeks on development',
-		'My first 3D (or 2.5D to be exact) game project'
+		'My first 3D (or 2.5D to be exact) game project',
+		'Game assets are not done by me, their credits can be found from the project\'s GitHub page'
+
 	],
 	learnings: [
 		'Learned the fundamentals of raycasting and how to mimic 3D rendering with a 2D engine',
@@ -186,7 +190,8 @@ export const games = [
 		'Solo project completed during my studies at Hive Helsinki',
 		'Key features: image and event handling, map processing, enemy AI, level design',
 		'Spent approximately 5 weeks on development',
-		'My very first game ever!'
+		'My very first game ever!',
+		'Game assets are not done by me, their credits can be found from the project\'s GitHub page'
 	],
 	learnings: [
 		'Mastered the basics of image rendering, sprite animation, and core gameplay logic',
