@@ -9,7 +9,8 @@ export const videoURLs = {
 	mazeShooter: 'https://www.youtube.com/embed/m7hA2ElXESM?autoplay=1&mute=1&loop=1&playlist=m7hA2ElXESM&modestbranding=1&controls=1&rel=0',
 	gravityChanger: 'https://www.youtube.com/embed/cY3cfVtlbtA?autoplay=1&mute=1&loop=1&playlist=cY3cfVtlbtA&modestbranding=1&controls=1&rel=0',
 	snakeAdventures: 'https://www.youtube.com/embed/y2wVuEMDLFQ?autoplay=1&mute=1&loop=1&playlist=y2wVuEMDLFQ&modestbranding=1&controls=1&rel=0',
-	spaceInvaders: 'https://www.youtube.com/embed/lC5ufEy9nk8?autoplay=1&mute=1&loop=1&playlist=lC5ufEy9nk8&modestbranding=1&controls=1&rel=0'
+	spaceInvaders: 'https://www.youtube.com/embed/lC5ufEy9nk8?autoplay=1&mute=1&loop=1&playlist=lC5ufEy9nk8&modestbranding=1&controls=1&rel=0',
+	vampires: 'https://www.youtube.com/embed/f27j3-jZVr8?autoplay=1&mute=1&loop=1&playlist=f27j3-jZVr8&modestbranding=1&controls=1&rel=0'
 }
 
 export const imageURLs = {
@@ -18,7 +19,8 @@ export const imageURLs = {
   mazeShooter: '/images/maze_shooter_image.webp',
   gravityChanger: '/images/gravity_changer_img.png',
   snakeAdventures: '/images/snake_adventures.webp',
-  spaceInvaders: '/images/space_invader_challenge_img.png'
+  spaceInvaders: '/images/space_invader_challenge_img.png',
+  vampires: 'images/vampires_image.webp'
 };
 
 export const iconURLs = {

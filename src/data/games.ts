@@ -38,6 +38,39 @@ export const games = [
   isGameJam: true
 },
 {
+  title: 'Vampires!',
+  releaseDate: '10/2025',
+  previewImg: imageURLs.vampires,
+  videoSrc: videoURLs.vampires,
+  stack: ['Cpp', 'SFML'],
+  label: 'C++',
+  bgColor: commonBgColor,
+  shortDescription: 'Survive hordes of bloodthirsty vampires in this intense and challenging survival game.',
+  description:
+    'Vampires! is an intense survival game built on top of an old Supercell code challenge base game. \
+	You play as the lone survivor of a vampire outburst, facing waves of these cunning monsters. Armed with your Lance and the Holy Pulse ability, \
+	you must navigate through levels, defeat increasingly dangerous vampire types, and upgrade your skills using Skill Points. \
+	Can you make it through the night without getting bitten...?',
+  process: [
+    'Developed using C++ and the SFML library',
+    'Solo project completed in 40 working hours',
+    'Built on top of a code challenge base code',
+    'Introduced new mechanics: player ability handling, level progression, enemy variety and skill point system',
+    'Focused on creating a scalable, clean code architecture to ease future expansions',
+  ],
+  learnings: [
+    'Improved C++ coding skills with a focus on clean design',
+	'Learned the importance of base classes and inheritance in C++ code architecture',
+    'Got experience in game testing and finding the proper balance of game difficulty',
+	'Implemented a bullet proof game state handling system'
+  ],
+  codeUrl: 'https://github.com/panu-kangas/Vampires',
+  playUrl: '',
+  slug: 'vampires',
+  isPlayableOnline: false,
+  isGameJam: false
+},
+{
 	title: 'The Lab Incident',
 	releaseDate: '01/2025',
 	previewImg: imageURLs.labIncident,
