@@ -67,7 +67,7 @@ const Home = () => {
         <div className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12 space-y-4">
           	<p>
 			My name is Panu, I'm a game developer <span className="text-green-400 font-semibold">specialized in C++</span> with a strong technical foundation. 
-			Beyond code, I bring <span className="text-green-400 font-semibold">creativity and leadership</span> to the table, shaped by a unique 10-year background in musical theatre and six years managing my own theatre ensemble.
+			Beyond code, I bring <span className="text-green-400 font-semibold">creativity and leadership</span> to every project, shaped by a unique 10-year background in musical theatre and six years managing my own theatre ensemble.
 			I'm very <span className="text-green-400 font-semibold">passionate about game development</span> and eager to take on versatile roles across the industry.
 			</p>
         </div>
